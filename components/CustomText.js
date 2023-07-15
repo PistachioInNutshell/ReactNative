@@ -4,7 +4,7 @@ import React from "react";
 const Introducting = ({name, surname}) => {
     return(
         <view>
-            <text>Your First Name is {name} and Last name is {surname}</text>
+            <text>Your First Name is {name}! and Last name is {surname}</text>
         </view>
     )
 }
