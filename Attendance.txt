@@ -1,0 +1,4 @@
+StudentID   : 2013110412
+StudentName : Kittinan Kampusa 
+DatetoStudy : 15/7/2023
+ClassTopic  : Check the environment for any computer (GitHub and Program)
