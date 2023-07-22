@@ -21,3 +21,4 @@ const CustomText = () => {
 export default CustomText
 
 const styles = StyleSheet.create({});
+
