@@ -1,4 +1,4 @@
 StudentID   : 2013110412
 StudentName : Kittinan Kampusa 
-DatetoStudy : 15/7/2023
-ClassTopic  : Check the environment for any computer (GitHub and Program)
+DatetoStudy : 22/7/2023
+ClassTopic  : React Hook(useState), React Native Component Part II (Cont.)  >> Input, Stylesheet Components, Flexbox
