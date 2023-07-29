@@ -7,8 +7,8 @@ const Recap = () => {
     const [textInputEmail, setEmail] = useState('');
 
     const alertTextInput = () => {
-        alert('email: ' + setEmail + '\n' 
-            + 'password: ' );
+        alert('email: ' + textInputPassword  
+            + '\npassword: ' + textInputEmail);
         return;
     }
 
@@ -16,7 +16,7 @@ const Recap = () => {
         <view style={styles.container}>
             <TextInput
              placeholder = 'Email'
-             style = {styles.TextInputStyle}
+             style = {styles.input}
              value = {textInputEmail}
              onChangeText={(value) => {setEmail(value)}}
             />
@@ -25,7 +25,7 @@ const Recap = () => {
 
             <TextInput
              placeholder = 'Password'
-             style = {styles.TextInputStyle}
+             style = {styles.input}
              value = {textInputPassword}
              onChangeText={(value) => {setPassword(value)}}
             />
@@ -34,6 +34,7 @@ const Recap = () => {
 
             <button 
              title='SUBMIT'
+             style={styles.submitButton}
              onPress={() => {alertTextInput()}}
             />
         </view>
