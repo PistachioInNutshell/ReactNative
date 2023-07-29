@@ -1,4 +1,9 @@
 StudentID   : 2013110412
 StudentName : Kittinan Kampusa 
-DatetoStudy : 22/7/2023
-ClassTopic  : React Hook(useState), React Native Component Part II (Cont.)  >> Input, Stylesheet Components, Flexbox
+DatetoStudy : 29/7/2023
+ClassTopic  : 
+1. Recap : Practice with Components
+2. React Native Component, Part III (Cont.) >> Stylesheet , Flexbox
+3. User Interface Component >> Button
+4. React Hook part  useEffect
+5. Practice
