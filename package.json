@@ -12,9 +12,9 @@
   "main": "index.js",
   "devDependencies": {
     "expo": "^49.0.4",
-    "expo-status-bar": "~1.4.4",
+    "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
-    "react-native": "0.71.8"
+    "react-native": "0.72.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
