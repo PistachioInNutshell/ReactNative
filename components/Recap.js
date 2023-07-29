@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 
 const Recap = () => {
 
-    const [textInputPasswrod, setPassword] = useState('');
+    const [textInputPassword, setPassword] = useState('');
     const [textInputEmail, setEmail] = useState('');
 
     const alertTextInput = () => {
@@ -17,7 +17,7 @@ const Recap = () => {
             <TextInput
              placeholder = 'Email'
              style = {styles.TextInputStyle}
-             value = {textInputName}
+             value = {textInputEmail}
              onChangeText={(value) => {setEmail(value)}}
             />
 
@@ -26,7 +26,7 @@ const Recap = () => {
             <TextInput
              placeholder = 'Password'
              style = {styles.TextInputStyle}
-             value = {textInputEmail}
+             value = {textInputPassword}
              onChangeText={(value) => {setPassword(value)}}
             />
 
@@ -34,7 +34,7 @@ const Recap = () => {
 
             <button 
              title='SUBMIT'
-             onPress={() => {checkTextInput()}}
+             onPress={() => {alertTextInput()}}
             />
         </view>
     )
