@@ -7,8 +7,8 @@ const Recap = () => {
     const [textInputEmail, setEmail] = useState('');
 
     const alertTextInput = () => {
-        alert('email: ' + setEmail + '\n' +
-            + 'password: ' + setPassword);
+        alert('email: ' + setEmail + '\n' 
+            + 'password: ' );
         return;
     }
 
