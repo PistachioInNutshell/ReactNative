@@ -11,6 +11,7 @@ import IncrementCounter from './components/IncrementCounter';
 import Form from './components/Form';
 import Login from './components/Login';
 import Recap from './components/Recap';
+import TouchableRecap from './components/TouchablePractice';
 
 export default function App() {
   return (
@@ -26,7 +27,7 @@ export default function App() {
       {/* <Form/> */}
       {/* <Login/> */}
       {/* <Recap/> */}
-      <Recap/>
+      <TouchableRecap/>
     </View>
   );
 }

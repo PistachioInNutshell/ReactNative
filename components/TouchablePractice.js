@@ -7,7 +7,7 @@ import {
   Button
   } from 'react-native'
 import React from 'react'
-import styles from './components/Styles'
+import styles from './Styles'
 
 const TouchableRecap  = () => {
 
