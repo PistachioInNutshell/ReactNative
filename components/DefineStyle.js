@@ -1,6 +1,6 @@
 import {StyleSheet, View, Text} from 'react-native';
 import React, {useState} from 'react'
-import styles from '../components/styles';
+import styles from '../components/Styles';
 
 const DefineStyle = () => {
     return (
