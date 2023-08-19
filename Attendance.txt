@@ -2,6 +2,4 @@ StudentID   : 2013110412
 StudentName : Kittinan Kampusa 
 DatetoStudy : 5/8/2023
 ClassTopic  : 
-1. Recap : Practice with Touchable Components
-2. React Hook part useEffect
-3. Example and Practice React Hook part useEffect
+React Hook : useEffect / FlatList Component / In-class exercise
