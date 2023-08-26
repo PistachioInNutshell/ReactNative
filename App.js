@@ -6,6 +6,8 @@ import Example_useEffect from './components/Example_useEffect'
 import UseEffectFlatList from './components/UseEffectFlatList'
 import RandomUsersScreen from './components/RandomUsersScreen'
 import Flatlist_Example1 from './components/FlatList_Example1'
+import FlastListAPI from './components/FlastListAPI'
+import News from './components/News'
 
 const App = () => {
   return (
@@ -15,7 +17,9 @@ const App = () => {
       {/* <Example_useEffect/> */}
       {/* <UseEffectFlatList/> */}
       {/* <RandomUsersScreen/> */}
-      <Flatlist_Example1/>
+      {/* <Flatlist_Example1/> */}
+      {/* <FlastlistAPI/> */}
+      <News/>
     </View>
   )
 }
