@@ -1,5 +1,9 @@
 StudentID   : 2013110412
 StudentName : Kittinan Kampusa 
-DatetoStudy : 5/8/2023
+DatetoStudy : 26/8/2023
 ClassTopic  : 
-React Hook : useEffect / FlatList Component / In-class exercise
+1. PR Mobile Application Contest as a link 
+2. using Android Emulator
+3. using Fetch call API in Component
+4. Guideline: Postman calls the API
+5. In-class exercise
