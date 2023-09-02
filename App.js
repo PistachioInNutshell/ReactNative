@@ -1,35 +1,50 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {Text, View, Button, } from 'react-native'
 import React from 'react'
-import TouchableExample from './components/TouchableExample'
-import TouchablePractice from './components/TouchablePractice'
-import Example_useEffect from './components/Example_useEffect'
-import UseEffectFlatList from './components/UseEffectFlatList'
-import RandomUsersScreen from './components/RandomUsersScreen'
-import Flatlist_Example1 from './components/FlatList_Example1'
-import FlastListAPI from './components/FlastListAPI'
-import News from './components/News'
+import { NavigationContainer } from '@react-navigation/native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import HomeScreen from './screens/HomeScreen'
+import DetailsScreen from './screens/DetailsScreen'
+
+/* function HomeScreen({navigation}){
+  return(
+    <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>HomeScreen</Text>
+      <Button 
+       title = 'Go to Details'
+       onPress={()=>navigation.navigate('Details')}
+      />
+    </View>
+  )
+}
+
+function DetailsScreen(){
+  return(
+    <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>DetailScreen</Text>
+    </View>
+  )
+} */
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
+
   return (
-    <View style={styles.container}>
-      {/* <TouchableExample/> */}
-      {/* <TouchablePractice/> */}
-      {/* <Example_useEffect/> */}
-      {/* <UseEffectFlatList/> */}
-      {/* <RandomUsersScreen/> */}
-      {/* <Flatlist_Example1/> */}
-      {/* <FlastlistAPI/> */}
-      <News/>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen 
+        name='Home' 
+        component={HomeScreen} 
+        options={{title:'Overview'}}
+        />
+        <Stack.Screen 
+        name='Details' 
+        component={DetailsScreen} 
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
 export default App
 
-/* const styles = StyleSheet.create({
-  container:{
-    flex:1,   
-    justifyContent:'center',    
-    alignItems:'center'   
- }
-}) */
