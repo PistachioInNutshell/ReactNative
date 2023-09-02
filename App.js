@@ -4,6 +4,10 @@ import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import HomeScreen from './screens/HomeScreen'
 import DetailsScreen from './screens/DetailsScreen'
+import FirstPage from './pages/FirstPage'
+import SecondPage from './pages/SecondPage'
+import ThirdPage from './pages/ThirdPage'
+
 
 /* function HomeScreen({navigation}){
   return(
@@ -31,7 +35,18 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator 
+        initialRouteName='FirstPage'
+        screenOptions={{
+          headerStyle:{
+            backgroundColor:'#5CD67B'
+          },
+          headerTintColor:'#ffff',
+          headerTitleStyle:{
+            fontWeight: 'bold',
+          }
+        }}
+      >
         <Stack.Screen 
         name='Home' 
         component={HomeScreen} 
@@ -40,6 +55,19 @@ const App = () => {
         <Stack.Screen 
         name='Details' 
         component={DetailsScreen} 
+        />
+        <Stack.Screen 
+        name='FirstPage' 
+        component={FirstPage} 
+        options={{title:'Overview'}}
+        />
+        <Stack.Screen 
+        name='SecondPage' 
+        component={SecondPage} 
+        />
+        <Stack.Screen 
+        name='ThirdPage' 
+        component={ThirdPage} 
         />
       </Stack.Navigator>
     </NavigationContainer>
