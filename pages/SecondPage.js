@@ -1,5 +1,6 @@
 import {Text, View, Button, StyleSheet} from 'react-native'
 import React from 'react'
+
 import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 
@@ -17,7 +18,7 @@ const SecondPage = ({navigation}) => {
       />
       <Button 
        title = 'Go to first page'
-       onPress={()=>navigation.navigate('FirstPage')}
+       onPress={()=>navigation.navigate('First Drawer')}
       />
       <Button 
        title = 'Go to third page'
