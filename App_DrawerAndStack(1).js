@@ -44,7 +44,7 @@ function MyDrawer(){
     <Drawer.Navigator
      screenOptions={{
       drawerStyle: {
-        backgroundColor: '#F8F8F8',
+        backgroundColor: '#c6cbef',
         width: 240,
       },
      }}
