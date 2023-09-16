@@ -1,68 +1,68 @@
 import 'react-native-gesture-handler';
-import {Text, View, } from 'react-native'
+import {StyleSheet, Text, View, } from 'react-native'
 import React from 'react'
 
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import {Ionicons} from '@expo/vector-icons';
 
-import FirstPage from './pages/FirstPage';
-import SecondPage from './pages/SecondPage';
-import ThirdPage from './pages/ThirdPage';
-
-import CustomSideBarMenu from './pages/CustomSideBarMenu';
-
-function FirstScreenStack(){
+function HomeScreen(){
   return(
-    <Stack.Navigator
-     screenOptions={{
-      headerShown:false
-     }}
-    >
-      <Stack.Screen name = 'First Page ' component={FirstPage}/>
-    </Stack.Navigator>
-  );
+    <View style = {{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+     <Text>Home!</Text>
+    </View>
+  )
 }
 
-function SecondScreenStack(){
+function SettingScreen(){
   return(
-    <Stack.Navigator
-    screenOptions={{
-        headerShown:false
-    }}
-    >
-      <Stack.Screen name = 'Second Page ' component={SecondPage}/>
-    </Stack.Navigator>
-  );
+    <View style = {{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+     <Text>Setting!</Text>
+    </View>
+  )
 }
 
-const Drawer = createDrawerNavigator();
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
-function MyDrawer(){
+function MyTabs(){
   return(
-    <Drawer.Navigator
-     screenOptions={{
-      drawerStyle: {
-        backgroundColor: '#F8F8F8',
-        width: 240,
+    <Tab.Navigator
+     screenOptions={({route})=>({
+      tabBarIcon : ({focused, color, size})=>  {
+        let iconName;
+        if(route.name == 'Home'){
+          iconName = focused
+            ? 'ios-information-circle' 
+            : 'ios-information-circle-outline'
+        } else if(route.name == 'Settings' ){
+          iconName = focused
+            ? 'list-outline'
+            : 'ios-list'
+        }
+        //You can return any component that you like here
+        return <Ionicons name = {iconName} size = {size} color={color}/>
       },
-     }}
-     drawerContent={(props)=><CustomSideBarMenu {...props}/>}
-    >      
-     <Drawer.Screen name = 'First Drawer' component={FirstScreenStack} options={{drawerLabel:'First page Option'}}/>
-     <Drawer.Screen name = 'Second Drawer' component={SecondScreenStack} options={{drawerLabel:'Second page Option'}}/>
-    </Drawer.Navigator>
+      tabBarActiveTintColor : 'tomato',
+      tabBarInactiveTintColor : 'grey'
+     }
+     )}
+    >
+     <Tab.Screen name = 'Home' component={HomeScreen}/>
+     <Tab.Screen name = 'Settings' component={SettingScreen}/>
+
+    </Tab.Navigator>
   )
 }
 
 const App = () => {
   return (
     <NavigationContainer>
-     <MyDrawer/>
+     <MyTabs/>
     </NavigationContainer>
   )
 }
 
 export default App
+
+const style = StyleSheet.create({})
 
