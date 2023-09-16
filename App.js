@@ -23,7 +23,7 @@ function FirstScreenStack(){
       }
      }}
     >
-      <Stack.Screen name = 'First page Option' component={FirstPage}/>
+      <Stack.Screen name = 'First Page ' component={FirstPage}/>
     </Stack.Navigator>
   );
 }
@@ -41,7 +41,7 @@ function SecondScreenStack(){
       }
      }}
     >
-      <Stack.Screen name = 'Second page Option' component={SecondPage}/>
+      <Stack.Screen name = 'Second Page ' component={SecondPage}/>
     </Stack.Navigator>
   );
 }
