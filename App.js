@@ -1,23 +1,31 @@
-import 'react-native-gesture-handler';
 import {StyleSheet, Text, View, } from 'react-native'
 import React from 'react'
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-import {Ionicons} from '@expo/vector-icons';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-function HomeScreen(){
+function Feed(){
   return(
     <View style = {{flex: 1, justifyContent:'center', alignItems: 'center'}}>
-     <Text>Home!</Text>
+      <Text>Feed</Text>
     </View>
   )
 }
 
-function SettingScreen(){
+function Profile(){
   return(
     <View style = {{flex: 1, justifyContent:'center', alignItems: 'center'}}>
-     <Text>Setting!</Text>
+      <Text>Profile</Text>
+    </View>
+  )
+}
+
+function Notifications(){
+  return(
+    <View style = {{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+      <Text>Notifications</Text>
     </View>
   )
 }
@@ -27,29 +35,41 @@ const Tab = createBottomTabNavigator();
 function MyTabs(){
   return(
     <Tab.Navigator
-     screenOptions={({route})=>({
-      tabBarIcon : ({focused, color, size})=>  {
-        let iconName;
-        if(route.name == 'Home'){
-          iconName = focused
-            ? 'ios-information-circle' 
-            : 'ios-information-circle-outline'
-        } else if(route.name == 'Settings' ){
-          iconName = focused
-            ? 'list-outline'
-            : 'ios-list'
-        }
-        //You can return any component that you like here
-        return <Ionicons name = {iconName} size = {size} color={color}/>
-      },
-      tabBarActiveTintColor : 'tomato',
-      tabBarInactiveTintColor : 'grey'
-     }
-     )}
+     initialRouteName = 'Feed'
+     activeColor = '#A0E186'
+     labelStyle = {{fontSize : 12}}
+     style = {{backgroundColor : 'tomato'}}
     >
-     <Tab.Screen name = 'Home' component={HomeScreen}/>
-     <Tab.Screen name = 'Settings' component={SettingScreen}/>
-
+      <Tab.Screen
+       name = 'Feed'
+       component={Feed}
+       options={{
+        tabBarLabel: 'Home',
+        tabBarIcon : ({color})=>(
+          <MaterialCommunityIcons name = 'home' color = {color} size={26} />
+        )
+       }}
+      />
+      <Tab.Screen
+       name = 'Notification'
+       component={Notifications}
+       options={{
+        tabBarLabel: 'Updates',
+        tabBarIcon : ({color})=>(
+          <MaterialCommunityIcons name = 'bell' color = {color} size={26} />
+        )
+       }}
+      />
+      <Tab.Screen
+       name = 'Profile'
+       component={Profile}
+       options={{
+        tabBarLabel: 'profile',
+        tabBarIcon : ({color})=>(
+          <MaterialCommunityIcons name = 'account' color = {color} size={26} />
+        )
+       }}
+       />
     </Tab.Navigator>
   )
 }
