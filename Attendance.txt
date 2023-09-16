@@ -1,7 +1,7 @@
 StudentID   : 2013110412
 StudentName : Kittinan Kampusa 
-DatetoStudy : 9/9/2023
-ClassTopic  : 
-- React Navigator : Stack Navigator with passing parameters to routes
-- React Navigator : Drawer Navigator
+DatetoStudy : 16/9/2023
+Class Agenda
+- React Navigator : Drawer Navigator (Continue)
+- React Navigator : Bottom Tabs Navigator
 - In-class exercise
